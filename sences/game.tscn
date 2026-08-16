@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b1a02o43pk7h3"]
+
+[ext_resource type="PackedScene" uid="uid://b58b21or7ygkt" path="res://sences/background.tscn" id="1_a53l5"]
+[ext_resource type="PackedScene" uid="uid://b875buuy2vuts" path="res://sences/player.tscn" id="1_w4np8"]
+[ext_resource type="PackedScene" uid="uid://b00aw0frwbi8u" path="res://sences/map.tscn" id="3_pxhlp"]
+[ext_resource type="PackedScene" uid="uid://dd8nayxsx8jcv" path="res://sences/killzone.tscn" id="4_qi43j"]
+
+[node name="Game" type="Node2D" unique_id=1215743157]
+
+[node name="Background" parent="." unique_id=1484880616 instance=ExtResource("1_a53l5")]
+modulate = Color(0.51462185, 0.51462185, 0.51462185, 1)
+position = Vector2(415, 186)
+
+[node name="Player" parent="." unique_id=176820226 instance=ExtResource("1_w4np8")]
+position = Vector2(496, 208)
+
+[node name="Map" parent="." unique_id=706361179 instance=ExtResource("3_pxhlp")]
+position = Vector2(422, 224)
+
+[node name="Killzone" parent="." unique_id=1233746079 instance=ExtResource("4_qi43j")]
+position = Vector2(701, 317)
