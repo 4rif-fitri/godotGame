@@ -20,4 +20,5 @@ func _on_timer_timeout() -> void:
 		updateLabelText()
 	else: 
 		timer.stop()
+		Controller.reset_coin()
 		get_tree().reload_current_scene()
