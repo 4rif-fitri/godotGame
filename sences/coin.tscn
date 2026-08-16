@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dkf5k4l1oa2yv"]
+
+[ext_resource type="Texture2D" uid="uid://cp7buqhwsl7ne" path="res://assets/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_cui3w"]
+[ext_resource type="Script" uid="uid://c3yoea07snyym" path="res://scripts/coin.gd" id="1_tek2p"]
+[ext_resource type="Texture2D" uid="uid://cw17xyq8hyxf1" path="res://assets/Pirate Treasure/Sprites/Gold Coin/02.png" id="2_tek2p"]
+[ext_resource type="Texture2D" uid="uid://14eejss833v7" path="res://assets/Pirate Treasure/Sprites/Gold Coin/03.png" id="3_0e2mo"]
+[ext_resource type="Texture2D" uid="uid://da061ccouj0oi" path="res://assets/Pirate Treasure/Sprites/Gold Coin/04.png" id="4_qff8u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sfpqe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cui3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tek2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0e2mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qff8u")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qosno"]
+radius = 3.0
+
+[node name="Coin" type="Node2D" unique_id=1434965710]
+script = ExtResource("1_tek2p")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1554770660]
+sprite_frames = SubResource("SpriteFrames_sfpqe")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.78035516
+
+[node name="Area2D" type="Area2D" parent="." unique_id=830342420]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area2D" unique_id=1088088610]
+shape = SubResource("CircleShape2D_qosno")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -4,12 +4,30 @@
 [ext_resource type="PackedScene" uid="uid://b875buuy2vuts" path="res://sences/player.tscn" id="1_w4np8"]
 [ext_resource type="PackedScene" uid="uid://b00aw0frwbi8u" path="res://sences/map.tscn" id="3_pxhlp"]
 [ext_resource type="PackedScene" uid="uid://dd8nayxsx8jcv" path="res://sences/killzone.tscn" id="4_qi43j"]
+[ext_resource type="PackedScene" uid="uid://dkf5k4l1oa2yv" path="res://sences/coin.tscn" id="5_rrhj2"]
 
 [node name="Game" type="Node2D" unique_id=1215743157]
 
 [node name="Background" parent="." unique_id=1484880616 instance=ExtResource("1_a53l5")]
 modulate = Color(0.51462185, 0.51462185, 0.51462185, 1)
 position = Vector2(415, 186)
+
+[node name="Coins" type="Node2D" parent="." unique_id=327275065]
+
+[node name="Coin" parent="Coins" unique_id=1434965710 instance=ExtResource("5_rrhj2")]
+position = Vector2(375, 210)
+
+[node name="Coin2" parent="Coins" unique_id=1613141525 instance=ExtResource("5_rrhj2")]
+position = Vector2(543, 230)
+
+[node name="Coin3" parent="Coins" unique_id=1172992294 instance=ExtResource("5_rrhj2")]
+position = Vector2(446, 210)
+
+[node name="Coin4" parent="Coins" unique_id=1510428826 instance=ExtResource("5_rrhj2")]
+position = Vector2(652, 212)
+
+[node name="Coin5" parent="Coins" unique_id=444682674 instance=ExtResource("5_rrhj2")]
+position = Vector2(335, 166)
 
 [node name="Player" parent="." unique_id=176820226 instance=ExtResource("1_w4np8")]
 position = Vector2(496, 208)
